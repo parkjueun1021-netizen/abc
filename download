@@ -1,0 +1,10 @@
+export default function ProgressBar({ current, total = 3 }) {
+  return (
+    <div className="progress-wrap" aria-label={`${current}/${total} 문항`}>
+      <div className="progress-meta"><span>딜레마 응답</span><span>{current} / {total}</span></div>
+      <div className="progress-track">
+        <div className="progress-fill" style={{ width: `${(current / total) * 100}%` }} />
+      </div>
+    </div>
+  )
+}
